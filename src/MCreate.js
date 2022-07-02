@@ -13,7 +13,8 @@ function MCreate() {
         e.preventDefault();
         console.log(title, description, price)
 
-        navigate('/ton/mentor/wait/' + (new Date()).getTime())
+        const nba = localStorage.getItem('nba')
+        navigate('/ton/mentor/wait/' + nba)
     }
 
     return (

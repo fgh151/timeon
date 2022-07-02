@@ -19,10 +19,19 @@ const Login = () => {
 
         e.preventDefault();
         tonMnemonic.mnemonicToSeed(words)
-            .then(seed => {
+            .then(async seed => {
                 const tonweb = new TonWeb();
                 const keyPair = tonweb.utils.nacl.sign.keyPair.fromSeed(seed);
+
+                console.log(keyPair)
+
+                const wallet = tonweb.wallet.create({publicKey:keyPair.publicKey});
+                const address = await wallet.getAddress();
+                const nonBounceableAddress = address.toString(true, true, false);
+                //
+                //
                 localStorage.setItem('cr', JSON.stringify(keyPair))
+                localStorage.setItem('nba', nonBounceableAddress)
                 navigate('/ton/')
             })
     }
