@@ -21,6 +21,10 @@ const Login = () => {
                 console.log(seed)
 
                 const tonweb = new TonWeb();
+                    const keyPair = tonweb.utils.nacl.sign.keyPair.fromSeed(seed);
+    console.log(keyPair)
+
+
 
             })
     }
