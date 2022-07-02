@@ -2,10 +2,12 @@ import React, {useState} from "react";
 import {Button, Form, Row} from "react-bootstrap";
 import * as tonMnemonic from "tonweb-mnemonic";
 import TonWeb from "tonweb";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
 
     const [words, setWords] = useState([]);
+    let navigate = useNavigate();
 
     const change = (index, word) => {
         let w = words;
