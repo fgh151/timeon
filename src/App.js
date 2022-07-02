@@ -11,6 +11,7 @@ import Menu from "./menu";
 import VInfo from "./VInfo";
 import VTranslation from "./VTranslation";
 import VResult from "./VResult";
+import Login from "./Login";
 
 export default function App() {
     return (
@@ -33,6 +34,8 @@ export default function App() {
                         <Route path="/ton/visitor/translation/:id" element={<VTranslation />} />
                         <Route path="/ton/visitor/result/:id" element={<VResult/>}/>
                         <Route path="/ton/visitor/:id" element={<VInfo />} />
+
+                        <Route path="/ton/login" element={<Login />} />
                     </Routes>
                 </Container>
             </Router>

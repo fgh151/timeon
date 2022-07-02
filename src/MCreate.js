@@ -1,9 +1,12 @@
 import React, {useState} from "react";
 import {Button, Form, Row} from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import {testTon} from "./utils/ton";
 
 
 function MCreate() {
+
+
 
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
@@ -12,6 +15,9 @@ function MCreate() {
     let navigate = useNavigate();
 
     const submit = (e) => {
+
+        testTon();
+
         e.preventDefault();
         console.log(title, description, price)
 

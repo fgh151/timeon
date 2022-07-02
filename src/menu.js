@@ -15,6 +15,11 @@ const Menu = () => {
                         <Link to='/ton/visitor/123'> Visitor</Link>
                     </div>
                 </div>
+                <div className='col'>
+                    <div className='video'>
+                        <Link to='/ton/login'> Login</Link>
+                    </div>
+                </div>
             </div>
         </div>
     )
