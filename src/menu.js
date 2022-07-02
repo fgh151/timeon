@@ -12,7 +12,7 @@ const Menu = () => {
                 </div>
                 <div className='col'>
                     <div className='video'>
-                        <Link to='/visitor'> Visitor</Link>
+                        <Link to='/visitor/123'> Visitor</Link>
                     </div>
                 </div>
             </div>
