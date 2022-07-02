@@ -3,17 +3,22 @@ import {Button, Form, Row} from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 function MCreate() {
+
+    const nba  = localStorage.getItem('nba')
+    let navigate = useNavigate();
+
+    if (typeof nba != "string") {
+        navigate('/ton/login/')
+    }
+
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [price, setPrice] = useState(0);
 
-    let navigate = useNavigate();
 
     const submit = (e) => {
         e.preventDefault();
         console.log(title, description, price)
-
-        const nba = localStorage.getItem('nba')
         navigate('/ton/mentor/wait/' + nba)
     }
 
