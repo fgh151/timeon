@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import MCreate from './MCreate';
 
 test('renders learn react link', () => {
-  render(<App />);
+  render(<MCreate />);
   const linkElement = screen.getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
 });
