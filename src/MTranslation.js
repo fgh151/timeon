@@ -7,7 +7,7 @@ const MTranslation = () => {
     let navigate = useNavigate();
 
     const stop = () => {
-        navigate('/mentor/result/' + params.id);
+        navigate('/ton/mentor/result/' + params.id);
     }
 
     return (

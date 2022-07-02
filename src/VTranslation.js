@@ -7,7 +7,7 @@ const VTranslation = () => {
     let navigate = useNavigate();
 
     const stop = () => {
-        navigate('/visitor/result/' + params.id);
+        navigate('/ton/visitor/result/' + params.id);
     }
 
     return (

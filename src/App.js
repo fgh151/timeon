@@ -24,15 +24,15 @@ export default function App() {
             <Router>
                 <Container className='mt-4'>
                     <Routes>
-                        <Route path="/" element={<Menu />} />
-                        <Route path="/mentor/" element={<MCreate/>}/>
-                        <Route path="/mentor/wait/:id" element={<MWait/>}/>
-                        <Route path="/mentor/translation/:id" element={<MTranslation/>}/>
-                        <Route path="/mentor/result/:id" element={<MResult/>}/>
+                        <Route path="/ton/" element={<Menu />} />
+                        <Route path="/ton/mentor/" element={<MCreate/>}/>
+                        <Route path="/ton/mentor/wait/:id" element={<MWait/>}/>
+                        <Route path="/ton/mentor/translation/:id" element={<MTranslation/>}/>
+                        <Route path="/ton/mentor/result/:id" element={<MResult/>}/>
 
-                        <Route path="/visitor/translation/:id" element={<VTranslation />} />
-                        <Route path="/visitor/result/:id" element={<VResult/>}/>
-                        <Route path="/visitor/:id" element={<VInfo />} />
+                        <Route path="/ton/visitor/translation/:id" element={<VTranslation />} />
+                        <Route path="/ton/visitor/result/:id" element={<VResult/>}/>
+                        <Route path="/ton/visitor/:id" element={<VInfo />} />
                     </Routes>
                 </Container>
             </Router>

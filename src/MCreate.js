@@ -15,7 +15,7 @@ function MCreate() {
         e.preventDefault();
         console.log(title, description, price)
 
-        navigate('/mentor/wait/' + (new Date()).getTime())
+        navigate('/ton/mentor/wait/' + (new Date()).getTime())
     }
 
     return (
