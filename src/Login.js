@@ -5,7 +5,7 @@ import TonWeb from "tonweb";
 
 const Login = () => {
 
-    const [words, setWords] = useState(["d","d","d","d","d","d","d","d","d","d","d","d","d","d","d","d","d","d","d","d","d","d","d","d"]);
+    const [words, setWords] = useState([]);
 
     const change = (index, word) => {
         let w = words;
@@ -18,14 +18,10 @@ const Login = () => {
         e.preventDefault();
         tonMnemonic.mnemonicToSeed(words)
             .then(seed => {
-                console.log(seed)
-
                 const tonweb = new TonWeb();
-                    const keyPair = tonweb.utils.nacl.sign.keyPair.fromSeed(seed);
-    console.log(keyPair)
-
-
-
+                const keyPair = tonweb.utils.nacl.sign.keyPair.fromSeed(seed);
+                localStorage.setItem('cr', JSON.stringify(keyPair))
+                navigate('/ton/')
             })
     }
 
@@ -42,7 +38,7 @@ const Login = () => {
                         </div>
                     </div>
                     {[...Array(24)].map((x, i) =>
-                        <div className='col-xs-12 col-sm-6 text-center' key={'i'+i}>
+                        <div className='col-xs-12 col-sm-6 text-center' key={'i' + i}>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label>{i + 1}</Form.Label>
                                 <Form.Control type="text" placeholder={i + 1}
