@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Button, Form, Row} from "react-bootstrap";
 import * as tonMnemonic from "tonweb-mnemonic";
-// import TonWeb from "tonweb";
+import TonWeb from "tonweb";
 
 const Login = () => {
 
@@ -20,7 +20,7 @@ const Login = () => {
             .then(seed => {
                 console.log(seed)
 
-                // const tonweb = new TonWeb();
+                const tonweb = new TonWeb();
 
             })
     }
