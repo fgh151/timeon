@@ -8,10 +8,10 @@ const MWait = () => {
     return (
         <div className='row'>
             <div className='col-xs-12 col-md-6'>
-                Event id {params.id}
+                Event id {params.id.substring(0, 30)}
             </div>
             <div className='col-xs-12 col-md-6 text-end'>
-                Link: <Link to={'/ton/visitor/' + params.id} target='_blank'>{window.location.hostname}/visitor/{params.id}</Link>
+                Link: <Link to={'/ton/visitor/' + params.id} target='_blank'>open</Link>
             </div>
 
             <div className='col-12'>
