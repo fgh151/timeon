@@ -4,14 +4,15 @@ import {useParams,} from "react-router-dom";
 const VResult = () => {
 
     let params = useParams();
+    const event = JSON.parse(atob(params.id));
 
     return (
         <div className='row'>
             <div className='col-12'>
                 <div className='mt-5'>
-                    <p>Event: {params.id}</p>
-                    <p>Time: 123</p>
-                    <p>Price: 100500 TON</p>
+                    <p>Event: {params.title}</p>
+                    <p>Time: {event.time}</p>
+                    <p>Price: {event.amount} TON</p>
                 </div>
             </div>
         </div>

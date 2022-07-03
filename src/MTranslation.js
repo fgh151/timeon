@@ -60,8 +60,20 @@ const MTranslation = () => {
 
     const stop = () => {
         stopVideo()
+        const event = JSON.parse(atob(params.id));
         process(event.author, localStorage.getItem('nba'), balance)
-        navigate('/ton/visitor/result/' + params.id);
+
+        const str = btoa( JSON.stringify({
+            "title": event.title,
+            "description": event.description,
+            "price":event.price,
+            "author": event.nba,
+            "amount": balance,
+            "time": time,
+        }))
+        localStorage.setItem('event', str);
+
+        navigate('/ton/mentor/result/' + str);
     }
 
     let sec = 0;
