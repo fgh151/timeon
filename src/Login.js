@@ -32,7 +32,7 @@ const Login = () => {
                 //
                 localStorage.setItem('cr', JSON.stringify(keyPair))
                 localStorage.setItem('nba', nonBounceableAddress)
-                navigate('/ton/')
+                navigate('/')
             })
     }
 

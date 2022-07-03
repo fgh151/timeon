@@ -73,7 +73,7 @@ const VTranslation = () => {
         }))
         localStorage.setItem('event', str);
 
-        navigate('/ton/visitor/result/' + str);
+        navigate('/visitor/result/' + str);
     }
 
     let sec = 0;
@@ -96,7 +96,7 @@ const VTranslation = () => {
     return (
         <div className='row'>
             <div className='col-xs-12 col-md-6'>
-                Event id {params.id}
+                Event id {params.id.substring(0, 30)}
             </div>
             <div className='col-xs-12 col-md-6 text-end'>
                 <span className='counter'>

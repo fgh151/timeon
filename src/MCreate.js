@@ -8,7 +8,8 @@ function MCreate() {
     let navigate = useNavigate();
 
     if (typeof nba != "string") {
-        navigate('/ton/login/')
+
+        localStorage.setItem('nba', 'UQC0ZtfMlXOWRlZPU9O9tIwBTftAXywOOBWVaD8qa6IivAeU')
     }
 
     const [title, setTitle] = useState("");
@@ -26,7 +27,7 @@ function MCreate() {
             "author": nba,
         }))
         localStorage.setItem('event', str);
-        navigate('/ton/mentor/wait/' + str)
+        navigate('/mentor/wait/' + str)
     }
 
     return (

@@ -14,7 +14,7 @@ const VInfo = () => {
                     <p>Event: {event.title}</p>
                     <p>Description: {event.description}</p>
                     <p>Price: {event.price} TON</p>
-                    <Link className='btn btn-primary' to={'/ton/visitor/translation/' + params.id}>Start event</Link>
+                    <Link className='btn btn-primary' to={'/visitor/translation/' + params.id}>Start event</Link>
                 </div>
             </div>
         </div>
