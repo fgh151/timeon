@@ -19,7 +19,12 @@ function MCreate() {
     const submit = (e) => {
         e.preventDefault();
         console.log(title, description, price)
-        const str = btoa( JSON.stringify({"title": title, "description": description, "price":price}))
+        const str = btoa( JSON.stringify({
+            "title": title,
+            "description": description,
+            "price":price,
+            "author": nba,
+        }))
         localStorage.setItem('event', str);
         navigate('/ton/mentor/wait/' + str)
     }

@@ -16,7 +16,8 @@
 }
 
 .video {
-    height: 121px;
+    min-height: 121px;
+    padding: 15px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -30,8 +31,8 @@
     /* Rectangle 2 */
 
     position: relative;
-    width: 25px;
-    height: 24px;
+    width: 27px;
+    height: 27px;
 
     background-color: #FF7878 !important;
     border-radius: 3.48px;
@@ -49,4 +50,13 @@
 
     display: block;
     content: '';
+}
+
+.counter {
+
+    border: 0.696629px solid #6F6F6F;
+    border-radius: 3.48315px;
+
+    padding: 3.48315px 14.6292px;
+    margin-right: 10px;
 }
