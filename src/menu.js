@@ -20,6 +20,16 @@ const Menu = () => {
                         <Link to='/login'> Login</Link>
                     </div>
                 </div>
+                <div className='col'>
+                    <div className='video'>
+                        <a href='/pres.pdf'> pdf</a>
+                    </div>
+                </div>
+                <div className='col'>
+                    <div className='video'>
+                        <a href='/pres.mp4'>mp4</a>
+                    </div>
+                </div>
             </div>
         </div>
     )
