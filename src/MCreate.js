@@ -19,7 +19,9 @@ function MCreate() {
     const submit = (e) => {
         e.preventDefault();
         console.log(title, description, price)
-        navigate('/ton/mentor/wait/' + nba)
+        const str = btoa( JSON.stringify({"title": title, "description": description, "price":price}))
+        localStorage.setItem('event', str);
+        navigate('/ton/mentor/wait/' + str)
     }
 
     return (
